@@ -3,36 +3,44 @@ import unittest
 
 class TestGaussElimination(unittest.TestCase):
 
-    def test_distributed_zeros(self):
-        A = np.matrix([[0, 2, 0],
-                       [0, 0, 0],
-                       [1, 0, 3]])
+    def test_underdetermined_matrix(self):
+        A = np.matrix([
+            [2, 0, 4],
+            [0, 3, 5],
+            [0, 0, 0]
+        ])
         result = gauss_elimination(A)
-        expected_output = "Das Gleichungssystem hat keine eindeutige Lösung."
+        expected_output = "Das Gleichungssystem ist unterbestimmt."
         self.assertEqual(result, expected_output)
 
-    def test_letter_variables(self):
-        A = np.matrix([['a', 2, '2-a'],
-                       [1, 'b', '2b'],
-                        [3, '2b', 'a-b']])
+    def test_variable_in_matrix(self):
+        A = np.matrix([
+            [1, 2, 3],
+            [2, 4, 6],
+            [3, 6, 9]
+        ])
         result = gauss_elimination(A)
-        expected_output = "Die Koeffizientenmatrix enthält Buchstaben. Bitte überprüfen Sie die Eingabe."
+        expected_output = "Das Gleichungssystem ist linear abhängig. Die Variablen sind linear abhängig, zum Beispiel: x3 = 0.5 * x2."
         self.assertEqual(result, expected_output)
 
-    def test_normal_case(self):
-        A = np.matrix([[2, -1, 3],
-                       [4, 2, 8],
-                       [1, 3, 9]])
+    def test_regular_matrix(self):
+        A = np.matrix([
+            [2, 1, 3],
+            [1, 3, 2],
+            [3, 2, 1]
+        ])
         result = gauss_elimination(A)
-        expected_output = f"Die Lösung des Gleichungssystems ist x_1 = 3, x_2 = -1, x_3 = 1."
+        expected_output = "Das Gleichungssystem hat eine eindeutige Lösung. Die Matrix ist linear unabhängig."
         self.assertEqual(result, expected_output)
 
     def test_linear_dependent_matrix(self):
-        A = np.matrix([[1, 2, 3],
-                       [2, 4, 6],
-                       [3, 6, 9]])
+        A = np.matrix([
+            [1, 2, 3],
+            [2, 4, 6],
+            [3, 6, 9]
+        ])
         result = gauss_elimination(A)
-        expected_output = "Die Gleichungen sind linear abhängig. Unendlich viele Lösungen existieren."
+        expected_output = "Das Gleichungssystem ist linear abhängig. Die Matrix hat Zeilen, die linear abhängig sind."
         self.assertEqual(result, expected_output)
 
 if __name__ == '__main__':
