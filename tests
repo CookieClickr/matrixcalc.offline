@@ -12,8 +12,9 @@ class TestGaussElimination(unittest.TestCase):
         self.assertEqual(result, expected_output)
 
     def test_letter_variables(self):
-        A = np.matrix([['a', 2],
-                       [1, 'b']])
+        A = np.matrix([['a', 2, '2-a'],
+                       [1, 'b', 'b*2'],
+                        [3, '2b', 'a-b']])
         result = gauss_elimination(A)
         expected_output = "Die Koeffizientenmatrix enthält Buchstaben. Bitte überprüfen Sie die Eingabe."
         self.assertEqual(result, expected_output)
