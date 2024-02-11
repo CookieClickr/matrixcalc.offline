@@ -59,7 +59,6 @@ def check_linear_dependency(vectors): # Check the linear dependency of a list of
                 file.write(step)
                 file.write("\n")
             file.write("\n")
-            file.write("Lineare Gleichungssysteme:\n")
             for i, eq in enumerate(equations):
                 file.write(f"Schritt {i+1}: {eq}\n")
 
