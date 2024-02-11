@@ -4,3 +4,4 @@
 ->Porgramm kann Vektoren (ohne zusätzliche Variablen) auf lineare Abhängigkeit prüfen.
 07.02. Programm schreibt Lösungsweg in Textfile(Anweisung welche Zeile mit welcher verrechnet werden soll). Kein  Fehler mehr, angabe der Lösungsmenge geht. Ohne Variablen, mit 2x2 Vektoren getestet.
 08.02. Programm schreibt Matrizen Schritt für Schritt in Textdatei, Zahlenvektoren damit rein Vorgabenmäßig erledigt. Als Nächstes kommt die GUI und dann die Eingabe von Parametern.
+11.02. GUI und Testprogramme vollständig
