@@ -57,15 +57,6 @@ class check_dependency(unittest.TestCase):
         expected_output = "Die Vektoren sind linear unabhängig."
         self.assertEqual(result, expected_output)
 
-    def test_unknownError_matrix(self):
-        A = np.matrix([
-            [2, 1, 4],
-            [-1, 7, -5],
-            [5, 0, 11]
-        ])
-        result = check_linear_dependency(A)
-        expected_output = "Die Vektoren sind linear unabhängig."
-        self.assertEqual(result, expected_output)
 
     def test_variable_in_matrix(self):
         A = np.matrix([
@@ -77,6 +68,15 @@ class check_dependency(unittest.TestCase):
         expected_output = "Die Vektoren sind linear abhängig, wenn die Variablen sind bestimmte Werte annehmen. Zum Beispiel: x3 = 0.5 * x2."
         self.assertEqual(result, expected_output)
 
+    def test_unknownError(self):
+        A = np.matrix([
+            [2, 1, 4],
+            [-1, 7, -5],
+            [5, 0, 11]
+        ])
+        result = check_linear_dependency(A)
+        expected_output = "Die Vektoren sind linear unabhängig."
+        self.assertEqual(result, expected_output)
 
    
 if __name__ == '__main__':
