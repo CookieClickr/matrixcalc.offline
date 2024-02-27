@@ -1,0 +1,128 @@
+
+# Grading Criteria Programmieren T3INF1004
+In jedem Unterbereich werden die Punkte (gerne auch Links ins GIT) erklärt, wie das LO erreicht worden ist.
+Alle Kriterien betreffen nur die Projektarbeit. Beweismaterial kommt aus dem Gruppenprojekt.
+
+## FACHKOMPETENZ (40 Punkte)
+
+# Die Studierenden kennen die Grundelemente der prozeduralen Programmierung. (10)
+<!-- Siehe Kenntnisse in prozeduraler Programmierung: zutreffendes wählen und beweisen--> https://github.com/CookieClickr/matrixcalc.offline/blob/main/MatrixCalc
+Programm MatrixCalc
+Das Programm soll per Gauß Vektoren auf Lineare Abhängigkeit prüfen und das in eine Textdatei schreiben. ->Eine Funktion beschreibt die Eingabe von Vektoren, eine Andere die Berechnung mit Gaußschem Eliminationsverfahren und eine andere überprüft auf lineare Abhängigkeit
+# Sie können die Syntax und Semantik von Python (10)
+<!-- Eine Stelle aus ihrem Programmieren wählen auf die sie besonders stolz sind und begründen --> Zum Beispiel Zeile 19-25 in MatrixCalc; Pivot Element(in der Präsentation vorgestellt)
+https://github.com/CookieClickr/matrixcalc.offline/blob/main/MatrixCalc
+
+
+# Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10)
+<!-- Anhand von commits zeigen, wie jeder im Projekt einen Beitrag geleistet hat -->
+Größeres Programm: GUI vorhanden, Funktionen in „MatrixCalc“, Testprogramme (Unittests), um auf Funktionsfähigkeit zu testen.
+https://github.com/CookieClickr/matrixcalc.offline/blob/main/testprogram
+
+# Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
+<!-- Eine Stelle aus dem Projekt wählen auf die sie besonders stolz sind und begründen -->
+	-Zeile 6(MatrixCalc): Die Funnktion parse_Input legt den Grundstein für das Berechnen mit
+	Eingegebenen Parametern: Wenn es ein Symbol ist (Beispielsweise „a“, dann soll aus sympy symbols aufgerufen werden und wenn es eine Zahl ist, dann soll float als Datentyp verwendet werden)
+				
+-Zeile 36(MatrixCalc): Veränderung des Datentyps der Berechnung der ganzen Matrix
+
+
+## METHODENKOMPETENZ (10 Punkte)
+
+# Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
+<!-- Beweise anbringen für Nutzen folgender Tools (können links, screenshots und screnncasts sein) -->
+
+<!-- zB -->
+<!-- GIT -->Gemeinsames GitHub Repository: https://github.com/CookieClickr/matrixcalc.offline
+Anleitung zum gemeinsamen Arbeiten in der PowerPoint Präsentation vorhanden
+
+<!-- VSC --> Beispielsweise Live Share(Anleitung in PowerPoint Präsentation), Eingebaute Testing Extension unittest verwendet
+
+<!—Copilot, ChatGPT -->Verwendet um Grundlegende Struktur zu erstellen, Code zu verstehen und zu optimieren(Fehlersuche u.a. durch prompten und kommentieren lassen)
+<!-- other -->sympy, numpy, debugging, tkinter
+
+
+
+## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
+
+# Die Studierenden können ihre Software erläutern und begründen. (5)
+Die Software hatte zur Aufgabe, die Berechnung einer Matrix per Gaußschem Eliminationsverfahren in Stufenform durchzuführen und den Lösungsweg, das Verrechnen von einem linearen Gleichungssystem, per Hand zu imitieren.
+
+<!-- Jeder in der Gruppe: You have helped someone else and taught something to a fellow student (get a support message from one person) --> Louis: Code zu 100% verstehen, Zeile für Zeile debuggen
+Nico: Ergebnisorientiert, “zuerst Programm zum laufen bringen und ihm dann auf den Grund gehen“
+Allgemein haben wir beide beim debuggen viel dazu gelernt, einmal kam der eine zuerst darauf und hat es dem anderen erklärt und einmal andersrum.
+Der Umgang mit Copilot war für uns Beide Neuland und somit konnten wir uns beide weiterentwickeln
+->Persönlich und fachlich
+
+# Sie können existierenden Code analysieren und beurteilen. (5)
+<!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
+
+# Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
+<!-- Which technology did you learn outside of the teacher given input -->
+-VS-Code, wir hatten beide vorher mit PyCharm programmiert und sind dann beide aber (aufgrund der Verwendung von CoPilot) auf Vs-Code umgestiegen
+-CoPilot
+-sympy
+-Testing(unittest)…wurde im Unterricht angesprochen und im Projekt vertieft
+<!-- Did you or your group get help from someone in the classroom (get a support message here from the person who helped you) -->
+-Beim Installieren von Tests(Tom): Discord Call
+
+
+## ÜBERGREIFENDE HANDLUNGSKOMPETENZ (30 Punkte)
+
+# Die Studierenden können eigenständig Problemstellungen der Praxis analysieren und zu deren Lösung Programme entwerfen (30)
+<!-- Which parts of your project are you proud of and why (describe, analyse, link) -->
+<!-- Where were the problems with your implementation, timeline, functionality, team management (describe, analyse, reflect from past to future, link if relevant) -->
+
+Ablauf
+1.Zieldefinition: Was soll das Programm können? Was macht das Gaußsche Eliminationsverfahren aus und welche Schritte werden IMMER gemacht? Wie kann man das in eine Funktion schreiben damit die Berechnung mit beliebig vielen unterschiedlichen Matrizen funktioniert?
+2. Pseudocode erstellt, um erste Übersicht zu gewinnen
+3.Grundgerüst mit KI-Tools durch gut ausgedachte prompts
+4. Entwicklung des Codes: 
+-Zuerst Benutzereingabe
+-Berechnung
+-Format der Berechnung und des Outputs, Unterscheidung lineare Ab-/Unabhängigkeit
+-Dokumentation (Im Output steht lineare Ab-/Unabhängigkeit und welche Werte eventuelle Lösungsparameter haben/ was die Lösungsmenge beträgt
+-Schreiben in Textdatei
+-GUI erstellt um Benutzereingabe zu vereinfachen
+-Testprogramme
+
+<!-- Which parts of your project are you proud of and why (describe, analyse, link) -->
+-Programmcode, insbesondere, dass GUI funktioniert und dass Ausgabe als kopierbare Textdatei („solution_steps“) möglich ist.
+<!-- Where were the problems with your implementation, timeline, functionality, team management (describe, analyse, reflect from past to future, link if relevant) -->
+Es gab zeitliche Probleme in Hinsicht auf die Anforderungen, die wir an unser Programm hatten. Dadurch dass das Projekt so anspruchsvoll war und wir neben Programmieren noch so viele andere Aufgaben der anderen Fächer hatten, konnten wir nicht allen Anforderungen gerecht werden. Beispielsweise wäre die Eingabe von Parametern ein sehr wünschenswerter Zusatz gewesen, was das Programm noch nützlicher gemacht hätte.
+Auch die Struktur des Projekts stellte anfangs ein Problem dar. Wir wussten nicht, wo wir anfangen sollten, wüssten im Nachhinein aber auch nicht wirklich was man in der Situation hätte anders machen können. Da es ein neues Projekt war wurden uns die Umstände erst im Laufe der Zeit bewusst.
+
+## Kenntnisse in prozeduraler Programmierung:
+
+# - Algorithmenbeschreibung
+Pseudocode wurde vorher geschrieben um herauszufinden was der Code machen soll
+
+# - Datentypen
+Verschiedenste Datentypen benutzt und diese konvertiert/parsed
+
+# - E/A-Operationen und Dateiverarbeitung
+Zuerst mit Konsole, dann mit GUI gearbeitet
+
+# - Operatoren
+Ständig, da Rechenprogramm und Textdatei mit eingefügten Werten (String + Wert)
+
+# - Kontrollstrukturen
+Verwendung von For Schleifen und If Verzweigungen bei Überprüfung auf lineare Abhängigkeit
+
+# - Funktionen
+-Gauss
+-lineare Abhängigkeit
+-parse
+-siehe gui
+-siehe main
+
+# - Stringverarbeitung
+Ein- und Ausgabe des Lösungswegs
+
+# - Strukturierte Datentypen
+-Numpy Array
+-2d arrays
+-liste
+-tuple
+-dictionary
+
